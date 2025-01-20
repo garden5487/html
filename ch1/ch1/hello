@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8/">
+        <title>hello</title>
+        <!--
+             날짜 : 2025/01/20
+             이름 : 박정원
+             내용 : 1장 HTML 개발 환경 ㄱ축
+             VSCode 설치
+               - mouse Wheel zoom 설정
+               - 검색 -> Live server Extension 설치
+
+             크롬 브라우저 설치
+              - Open With Live
+        -->     
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <h2>Hello World</h2>
+    </body>         
+        
+
+
+
+    </head>
+</html>
