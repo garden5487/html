@@ -22,20 +22,17 @@
         #wrapper {
             width: 100%;
             height: 100%;
-            border: 1px solid red;
             box-sizing: border-box;
         }
 
         header {
             width: 100%;
             height: auto;
-            border: 1px solid blue;
             box-sizing: border-box;
         }
 
         header > div {
             width: 100%;
-            border: 1px solid green;
             box-sizing: border-box;
         }
         header .top > p {
@@ -51,7 +48,6 @@
         header > div > * {
             width: 1100px;
             height: 100%;
-            border: 1px solid orange;
             box-sizing: border-box;
             margin: 0 auto;
         }
@@ -123,8 +119,8 @@
         main {
             width: 100%;
             height: auto;
-            border: 1px solid blue;
             box-sizing: border-box;
+            margin: 0 auto;
         }
 
         main > .slider {
@@ -141,7 +137,6 @@
         main > section {
             width: 100%;
             height: auto;
-            border: 1px solid green;
             box-sizing: border-box;
         }
 
@@ -152,21 +147,11 @@
         main > section:nth-child(3) {height: 190px;}
         main > section:nth-child(4) {height: 660px;}
         main > section:nth-child(5) {height: 200px;}
-        main > section:nth-child(6) {height: 660px;}
+        main > section:nth-child(6) {height: 200px;}
 
-        main > section > article {
-            width: 1100px;
-            height: 100%;
-            border: 1px solid orange;
-            box-sizing: border-box;
-            margin: 0 auto;
-        }
-
-        main > .go > article {
-            padding: 30px 10px;
-            box-sizing: border-box;
-        }
        
+
+        
         main > .go > article > .banner1 {
         width: 412px;
         height: 450px;
@@ -180,7 +165,6 @@
 
         main > .go div {
             float: left;
-            border: 1px solid gray;
             box-sizing: border-box;
         }
 
@@ -189,17 +173,8 @@
             box-sizing: border-box;
         }
        
-        main > .go > article > .banner1 {
-            width: 412px;
-            height: 450px;
-            background-image: url(./images/main_go_bg1.png);        
-        }
         
-        main > .go > article > .banner > a {
-            position: absolute;
-            left: 26px;
-            top: 36px;
-        }
+     
         
         main > .go > article > .banner > a .category {
             font-weight: bold;
@@ -265,6 +240,15 @@
             margin: 0 auto;
         }
         
+        main > .oneday {
+            background-image: url(./images/oneday_bg.png);
+            background-size: cover;
+            background-position: 50% center;
+        }
+
+        main > .oneday > article img {
+            margin-top: 50px;
+        }
         a {
             text-decoration: none;
             color: #111;
@@ -274,11 +258,17 @@
             padding: 60px 0px 40px;
             box-sizing: border-box;
             text-align: center;
-}
+            
+        }
+
+        main > .vegetable > article {
+            padding: 60px 0px 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
         main > .vegetable ul {            
             width: 100%;
             height: 312px;
-            border: 1px solid gray;
             box-sizing: border-box;
             overflow: hidden;
         }
@@ -286,19 +276,11 @@
             float: left;
             width: 25%;
             height: 100%;
-            border: 1px solid pink;
             box-sizing: border-box;
         }        
 
-        main > .premium > article {
-            text-align: center;
-        }
-        main > .seafood {}
-        main > .seafood > article {
-            padding: 60px 0px 40px;
-            box-sizing: border-box;
-            text-align: center;
-        }
+    
+     
 
         main .thumb_rolling {
             width: 100%;
@@ -306,19 +288,6 @@
             margin-top: 36px;
             box-sizing: border-box;
             overflow: hidden;
-        }
-        main .all {
-            display: block;
-            width: 300px;
-            height: 50px;
-            border: 1px solid #efefef;
-            box-shadow: 0px 2px 2px #999;
-            text-align: center;
-            line-height: 50px;
-            margin: 56px auto 0;
-            color: #626262;
-            font-size: 15px;
-            font-weight: bold;
         }
 
         main .thumb_rolling > li {
@@ -330,10 +299,73 @@
             box-sizing: border-box;
         }
 
+        main .thumb_rolling > li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        main .thumb_rolling > li img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        main .thumb_rolling > li h1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #41392f;
+            margin-top: 12px;
+        }
+
+        main .thumb_rolling > li p {
+            font-size: 13px;
+            font-weight: bold;
+            color: #959595;
+            margin: 12px 0 26px;
+        }
+
+        main .thumb_rolling > li h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6a00;
+        }
+
+        main .all {
+            display: block;
+            width: 300px;
+            height: 50px;
+            box-shadow: 0px 2px 2px #999;
+            text-align: center;
+            line-height: 50px;
+            margin: 56px auto 0;
+            color: #626262;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        main > .premium {
+            background-image: url(./images/premium_bg.png);
+            background-size: cover;
+            background-position: 50% center;
+        }
+
+        main > .premium > article {
+            text-align: center;
+        }
+
+        main > .premium > article img {
+            margin-top: 52px;
+        }
+
+        main > .seafood > article {
+            padding: 60px 0px 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
         main > .seafood ul {            
             width: 100%;
             height: 312px;
-            border: 1px solid gray;
             box-sizing: border-box;
             overflow: hidden;
         }
@@ -341,20 +373,47 @@
             float:left;
             width: 25%;
             height: 100%;
-            border: 1px solid pink;
             box-sizing: border-box;
         }        
 
         footer {
             width: 100%;
             height: auto;
-            border: 1px solid blue;
             box-sizing: border-box;
+        }
+
+        footer .terms {
+            float: left;
+            margin-top: 14px;
+            color: #eee;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        footer .terms > a:first-child {
+            color: #ff6a00;
+        }
+
+        footer .terms > a {
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        footer .info {
+            float: left;
+            margin-top: 16px;
+            color: #aca9a9;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 26px;
+        }
+        footer .tel {
+            float: right;
+            margin-top: 16px;
         }
 
         footer > div {
             width: 100%;
-            border: 1px solid green;
             box-sizing: border-box;            
         }
 
@@ -371,7 +430,7 @@
         footer > div > div {
             width: 1100px;
             height: 100%;
-            border: 1px solid orange;
+
             box-sizing: border-box;
             margin: 0 auto;
         }
@@ -518,10 +577,9 @@
             </article>
             </section>
             <section class="oneday">
-                <a href="#">
-                    <img src="./images/oneday_txt.png" alt="매일매일 원가제공! 원데이 번개장터">
-                </a>
-               
+                <article>
+                    <a href="#"><img src="./images/oneday_txt.png" alt="매일매일 원가제공! 원데이 번개장터"></a>
+                </article>
             </section>
             <section class="vegetable">
                 <article>
@@ -564,6 +622,7 @@
                     <a href="#" class="all">전체 상품 보기</a>
 
                 </article>
+            </section>
             </section>
                 <article></article>
             </section>
