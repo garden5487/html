@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>약관</title>
+    <!--
+        날짜 : 2025/02/06
+        이름 : 박정원
+        내용 : 게시판 프로젝트 UI디자인 실습하기
+    -->
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        font: normal 12px '돋움';
+    }
+
+    ul, ol {list-style: none;}
+    a {text-decoration: none; color: #111;}
+    input, textarea {outline: none;}
+
+    #wrapper {
+         width: 800px;
+         height: auto;
+         margin: 0 auto;
+     
+    }
+    header {
+        width: 100%;
+        height: 35px;
+        border: 1px solid red;
+    }
+   
+    header .title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+    
+    main {
+        width: 100%;
+        height: auto;
+        border: 1px green;
+
+    }
+    
+    #user > .terms {
+        width: 600px;
+        height: auto;
+        margin: 60px auto;
+        overflow: hidden;
+    }
+   
+    #user > .terms > h2 {
+        margin-top: 10px;
+        margin-bottom: 6px;
+    }
+    
+    #user > .terms > table {
+        width: 100%;
+        height: auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-top: 2px solid #111;
+    }
+    
+    #user > .terms > table tr > td {
+        padding: 6px;
+        border: 1px solid #e9e9e9;
+        box-sizing: border-box;
+    }
+    #user > .terms > table tr > td > textarea {
+        width: 100%;
+        height: 200px;
+        resize: none;
+        background: #f7f7f7;
+        border: 1px solid #e4eaec;
+        padding: 2px;
+        box-sizing: border-box;
+    }
+    #user > .terms > table tr > td > label {
+        float: right;
+    }
+    
+   
+    #user > .terms > div {
+        float: right;
+        margin-top: 10px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 8px;
+        border: 1px solid #bebebe;
+        text-align: center;
+        cursor: pointer;
+    }
+   
+    footer {
+        width: 100%;
+        height: 35px;
+    }
+    footer > p {
+        margin-top: 10px;
+        margin-right: 10px;
+        color: #777;
+        overflow: hidden;
+    }
+    footer > p > .copyright {
+        float: left;
+    }
+   
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <header>
+            <h3>
+                <a href="/index.html" class="title">board Project</a>
+            </h3>
+        </header>
+        <main id="user">
+            <section class="terms">
+                <h2 class="tit">사이트 이용약관</h2>
+                <table border="1">                    
+                    <tbody>
+                        <tr>
+                        <td>
+                            <textarea name="terms">약관내용</textarea>
+                            <label><input type="checkbox" class="terms">&nbsp;동의합니다.</label>
+                        </td>
+                        </tr>
+                <h2 class="tit">개인정보 취급방침</h2>
+                </tbody>
+                <table border="1">                    
+                    <tbody>
+                    <tr>
+                        <td>
+                            <textarea name="privacy">약관내용</textarea>
+                            <label><input type="checkbox" class="privacy">&nbsp;동의합니다.</label>
+                        </td>
+                    </tr>
+                </tbody>
+                <div>
+                    <a href="./login.html" class="btn btnCancel">취소</a>
+                    <a href="./register.html" class="btn btnNext">다음</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>
+                <span class="copyright">Copyrightⓒ 김철학(개발에반하다.)</span>
+                <span class="version">v1.0.1</span>
+            </p>
+        </footer>
+
+    </div>
+       
+</body>
+</html>
