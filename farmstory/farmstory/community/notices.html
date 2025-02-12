@@ -139,17 +139,184 @@
         width: 802px;
         height: 100%;
         float: right;
+        box-sizing: border-box;
         
     }
-    main > .main_btm > article > nav {
-        position: absolute;
+
+    main > .main_btm > article > div {
+        
+        width: auto;
+        height: 600px;
+        box-sizing: border-box;
+        margin-left: 30px;
+    }
+    
+    main > .main_btm > article > nav:nth-child(1) {
+        
         width: 762px;
         height: 72px;
         left: 40px;
         border-bottom: 1px solid #C2C2C2;
         box-sizing: border-box;
         margin-bottom: 20px;
+        margin-left: 30px;
+    
     }
+
+
+
+    main > .main_btm > article > div > li{
+        ;
+    }
+
+    main > .main_btm > article > div > ul:nth-child(1){
+        width: auto;
+        height: 50px;
+        box-sizing: border-box;
+       
+    }
+
+    main > .main_btm > article > div > ul:nth-child(1) > p{     
+        padding-top: 27px;
+        font-size:smaller;
+        font-weight: 550;
+        
+        
+    }
+    main > .main_btm > article > div > ul:nth-child(1) > li{
+        position: absolute;
+        right: 0px;
+        top:115px;
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(1) {
+        width: auto;
+        height: 60px;
+        background-color: #eee9e9;
+        box-sizing: border-box;
+        
+       
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(1) > li:nth-child(1) {
+        float: left;
+        width: 10%;
+        height: 60px;
+        
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(1) >li:nth-child(2) {
+        float: left;
+        width: 55%;
+        height: 60px;
+        
+    }
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(1) > li:nth-child(3) {
+        float: left;
+        width: 10%;
+        height: 60px;
+        
+    
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(1) >li:nth-child(4) {
+        float: left;
+        width: 15%;
+        height: 60px;
+    }
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(1) >li:nth-child(5) {
+        float: left;
+        width: 10%;
+        height: 60px;
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol > li >p {
+        margin-top: 17px;
+        text-align: center;
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol > li >p:nth-child(7) {
+        margin-top: 17px;
+        
+    }
+
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(2) {
+        width: auto;
+        height: 60px;
+        
+    }
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(2) > li:nth-child(1) {
+        float: left;
+        width: 10%;
+        height: 60px;
+        
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(2) >li:nth-child(2) {
+        float: left;
+        width: 55%;
+        height: 60px;
+
+        
+    }
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(2) > li:nth-child(3) {
+        float: left;
+        width: 10%;
+        height: 60px;
+        
+    
+    }
+
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(2) >li:nth-child(4) {
+        float: left;
+        width: 15%;
+        height: 60px;
+    }
+    main > .main_btm > article > div > ul:nth-child(2) > ol:nth-child(2) >li:nth-child(5) {
+        float: left;
+        width: 10%;
+        height: 60px;
+    }
+    
+    main > .main_btm > article > div > ul:nth-child(2){
+        width: auto;
+        height: 120px;
+        box-sizing: border-box;
+        border-top: 3px solid #585858;  
+    }
+   
+
+    
+    main > .main_btm > article > div > ul:nth-child(3){
+        
+        width: auto;
+        height: 70px;
+        box-sizing: border-box;      
+        border-top:  2px solid #e0dfdf;
+    }
+
+    main > .main_btm > article > div > ul:nth-child(3) > li:nth-child(1){
+        float: left;
+        width: 70%;
+        height: 70px;
+        
+            
+    }
+
+    main > .main_btm > article > div > ul:nth-child(3) > li:nth-child(2){
+       float: left; 
+       width: 30%;
+        height: 70px;
+      
+         
+ }
+   
+        
+        
+           
+
+
     main > .main_btm > article > nav > img {
         position: absolute;
         top: 41px;
@@ -157,13 +324,7 @@
         display: flex;
     }
 
-    main > .main_btm> article > div {
-        position: absolute;
-        width: auto;
-        height: auto;
-        background-color: aqua;
-        box-sizing: border-box;
-    }
+   
 
     main > .main_btm  nav > div {
         position: absolute;
@@ -310,11 +471,82 @@
                         <a href="#">공지사항</a>
                     </div>
                 </nav>
-                <div>
+               <div>
                     <ul>
-
+                        <p>글목록</p>
+                        <li>
+                            <label> <input type="text" value=" 제목 키워드, 글쓴이 검색"></label>
+                            <input type="button" value="검색" onclick="" width="200" height="50px">
+                        </li>
+                        
                     </ul>
-                </div>
+                    <ul>
+                        <ol>
+                            <li>
+                                <p>
+                                    번호
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    제목
+                                </p>
+                            </li>
+                            <li> <p>
+                                    글쓴이
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    날짜
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    조회
+                                </p>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li>
+                                <p>
+                                    1
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    공지사항 게시물입니다.[3]
+                                </p>
+                            </li>
+                            <li> <p>
+                                    길동이
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    20-05-12
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    12
+                                </p>
+                            </li>
+                        </ol>
+                    </ul>
+                    <ul>
+                        <li>
+                            <input type="button" value="이전" onclick="" width="200" height="50px">
+                            <input type="button" value="1" onclick="" width="200" height="50px">
+                            <input type="button" value="2" onclick="" width="200" height="50px">
+                            <input type="button" value="3" onclick="" width="200" height="50px">
+                             <input type="button" value="다음" onclick="" width="200" height="50px">
+                        </li>
+                        <li>
+                           <input type="button" value="글쓰기" onclick="" width="200" height="50px">
+                        </li>
+                    </ul>
+               </div>
             </article>
         </section>
     </main>

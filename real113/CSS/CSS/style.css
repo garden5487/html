@@ -28,7 +28,10 @@ header > div {
     margin: 0 auto;
 }
 
-header > div > a{
+header > div >{
+    position: relative;
+    width: 1000px;
+    height: 100%;
     margin: 0 auto;
 }
 
