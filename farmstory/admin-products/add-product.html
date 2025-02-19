@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 주문관리> 주문목록</title>
+    <style>
+            /* 태그 초기화 */
+    * {
+        margin: 0;
+        padding: 0;
+        font: normal 12px '돋움';
+        }
+    ul, ol {list-style: none;}
+    a {text-decoration: none; color: #111;}
+    input, textarea {outline: none;}
+
+    #wrapper {
+        position: relative;
+        width: 1920px;
+        height: 499px;
+        overflow-y: scroll;
+
+        background: #FFFFFF;
+    }
+
+
+
+
+    /* 헤더 */
+    header {
+        position: absolute;
+        height: 60px;
+        left: 470px;
+        right: 470px;
+        top: 0px;
+
+        background: url(../images/admin/admin_bg.jpg);
+    }
+
+    header > img {
+        position: absolute;
+        width: 170px;
+        height: 32px;
+        left: 12px;
+        top: 12px;
+    }
+
+    .u_home {
+        /* Link → HOME | */
+        position: absolute;
+        width: 160px;
+        height: 14px;
+        right: 10px;
+        top: 13px;
+
+        
+    }
+
+    .u_home > a{
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        
+        align-items: center;
+
+        color: #FFFFFF;
+    }
+
+
+
+    /*메인 어사이드(왼쪽메뉴창)*/
+
+    main {
+        position: absolute;
+        width: auto;
+        height: 400px;
+        left: 470px;
+        right: 470px;
+        top: 60px;
+        border:1px solid blue;
+
+    }
+
+    main > aside {
+        float: left;
+        width: 175px;
+        height: 400px;
+        top: 0px;
+        box-sizing: border-box;
+        
+
+    }
+    main > div {
+        float: left;
+        width: 785px;
+        height: 400px;
+        top: 0px;
+     
+    }
+
+    main > div > ul:nth-child(1){
+        width: 785px;
+        height: 25px;
+      
+
+    }
+    main > div > ul:nth-child(1) > p{
+       font-size: larger;
+       font-weight :bold;
+       margin-top: 10px;
+    }
+    main > div > ul:nth-child(2){
+        float: left;
+        width: 785px;
+        height: 310px;
+        border-top: 2px solid #000000;
+    }
+    main > div > ul:nth-child(2) > p{
+      font-size: ;
+    }
+
+
+    table, th, td {
+        width: 785px;
+        border-bottom: 1px solid gray;
+        border-collapse: collapse;
+        box-sizing: border-box;        
+    }
+    th, td {
+        
+        padding: 9.5px 20px;
+    }
+    
+
+    main > div > ul:nth-child(3){
+        float: left;
+        width: 785px;
+        height: 50px;
+     
+    }
+
+    .a_title {
+        box-sizing: border-box;
+        height: 30px;
+        left: 10px;
+        right: 10px;
+        top: 10px;
+        margin-top: 14px;
+        background: #E5E5E5;
+        border: 1px solid #CCCCCC;
+        border-radius: 20px;
+    }
+
+    .a_title > span {
+        position: absolute;
+        margin-top: 16px;
+        width: 56.2px;
+        height: 15px;
+        left: 21px;
+        top: 7px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+
+        color: #000000;
+    }
+
+    .title {
+        position: absolute;
+        width: 176px;
+        height: 234px;
+        top: 40px;
+    }
+
+    .title > ul {
+        width: 176px;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    .title > ul > li:nth-of-type(1) {
+        position: absolute;
+        height: 72px;
+        left: 16px;
+        right: 16px;
+        top: 26px;
+    }
+
+    .title > ul > li:nth-of-type(1) > span{
+        position: absolute;
+        width: 48.2px;
+        height: 14px;
+        left: 0px;
+        top: 4px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+
+        color: #000000;
+    }
+
+    .title > ul > li:nth-of-type(1) > ol{
+        position: absolute;
+        height: 44px;
+        left: 0px;
+        right: 0px;
+        top: 28px;
+    }
+
+    .title > ul > li:nth-of-type(1) > ol > li:nth-of-type(1){
+        position: absolute;
+        height: 22px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+    }
+
+    .title > ul > li:nth-of-type(1) > ol > li:nth-of-type(2){
+        position: absolute;
+        height: 22px;
+        left: 0px;
+        right: 0px;
+        top: 22px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+
+        color: #111111;
+    }
+
+    .title > ul > li:nth-of-type(2) {
+        position: absolute;
+        height: 50px;
+        left: 16px;
+        right: 16px;
+        top: 108px;
+    }
+
+    .title > ul > li:nth-of-type(2) > span{
+        position: absolute;
+        width: 48.2px;
+        height: 14px;
+        left: 0px;
+        top: 4px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+
+        color: #000000;
+    }
+
+    .title > ul > li:nth-of-type(2) > ol {
+        position: absolute;
+        height: 22px;
+        left: 0px;
+        right: 0px;
+        top: 28px;
+    }
+
+    .title > ul > li:nth-of-type(2) > ol > li{
+        position: absolute;
+        
+        height: 14px;
+        left: 0px;
+        top: 0px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+
+        color: #111111;
+
+    }
+
+    .title > ul > li:nth-of-type(3) {
+        position: absolute;
+        height: 50px;
+        left: 16px;
+        right: 16px;
+        top: 168px;
+
+    }
+
+    .title > ul > li:nth-of-type(3) > span{
+        position: absolute;
+        width: 48.2px;
+        height: 14px;
+        left: 0px;
+        top: 4px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+
+        color: #000000;
+    }
+
+    .title > ul > li:nth-of-type(3) > ol {
+        position: absolute;
+        height: 22px;
+        left: 0px;
+        right: 0px;
+        top: 28px;
+
+    }
+
+    .title > ul > li:nth-of-type(3) > ol >li{
+        position: absolute;
+        
+        height: 14px;
+        left: 0px;
+        top: 0px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+
+        color: #111111;
+    }
+
+
+
+    /* footer */
+
+    footer{
+        position: absolute;
+        height: 39px;
+        left: 470px;
+        right: 470px;
+        top: 460px;
+
+        background: #353535;
+    }
+
+    footer >span{
+        position: absolute;
+        width: 449.56px;
+        height: 14px;
+        left: 12px;
+        top: 12px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10.875px;
+        line-height: 13px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+
+        color: #FFFFFF;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="../images/admin/admin_logo.jpg" alt="표지로고">
+            <span class="u_home">
+                <a href="">HOME |</a>&thinsp;
+                <a href="">로그아웃 |</a>&thinsp;
+                <a href=""> 고객센터</a>&thinsp;
+            </span>
+        </header>
+
+
+        <main>
+            <aside>
+                <div class="a_title">
+                    <span>주요기능</span>
+                </div>
+                <div class="title">
+                    <ul>
+                        <li>
+                            <span>상품관리</span>
+                            <ol>
+                                <li><a href="#">L 상품목록</a></li>
+                                <li><a href="">L 상품등록</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>주문관리</span>
+                            <ol>
+                                <li><a href="">L 주문목록</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>회원관리</span>
+                            <ol>
+                                <li><a href="">L 회원목록</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div>
+                <ul>
+                    <p>상품등록</p>
+                </ul>
+                <ul>
+                    <table>
+                        <tr>
+                            <td>상품명 <label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
+                        </tr>
+                        <tr>
+                            <td>가격</td>
+                        </tr>
+                        <tr>
+                            <td>포인트 <label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
+                        </tr>
+                        <tr>
+                            <td>할인</td>
+                        </tr>
+                        <tr>
+                            <td>배송비</td>
+                        </tr>
+                        <tr>
+                            <td>재고</td>
+                        </tr>
+                        <tr>
+                            <td>상품이미지</td>
+                        </tr>
+                        <tr>
+                            <td>기타</td>
+                        </tr>
+                    </table>
+
+                </ul>
+                <ul>
+
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <span>Copyright(C)Farmstory All rights reserved. FARMSTORY ADMINISTRATOR Version 1.0.1</span>
+        </footer>
+
+
+
+
+
+    </div>
+    
+</body>
+</html>
