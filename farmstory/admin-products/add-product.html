@@ -17,7 +17,7 @@
     #wrapper {
         position: relative;
         width: 1920px;
-        height: 499px;
+        height: 700px;
         overflow-y: scroll;
 
         background: #FFFFFF;
@@ -48,9 +48,9 @@
     .u_home {
         /* Link → HOME | */
         position: absolute;
-        width: 160px;
+        width: 161px;
         height: 14px;
-        right: 10px;
+        right: 15px;
         top: 13px;
 
         
@@ -76,52 +76,50 @@
     main {
         position: absolute;
         width: auto;
-        height: 400px;
+        height: 600px;
         left: 470px;
         right: 470px;
         top: 60px;
-        border:1px solid blue;
-
+     
     }
 
     main > aside {
         float: left;
         width: 175px;
-        height: 400px;
+        height: 600px;
         top: 0px;
         box-sizing: border-box;
+        padding-left: 10px;
         
-
     }
     main > div {
         float: left;
-        width: 785px;
-        height: 400px;
+        width: 775px;
+        height: 600px;
         top: 0px;
      
     }
 
     main > div > ul:nth-child(1){
         width: 785px;
-        height: 25px;
-      
-
+        height: 45px;
+     
     }
+
     main > div > ul:nth-child(1) > p{
        font-size: larger;
        font-weight :bold;
-       margin-top: 10px;
+       padding-top: 18px;
+       
     }
     main > div > ul:nth-child(2){
         float: left;
         width: 785px;
-        height: 310px;
+        height: auto;
         border-top: 2px solid #000000;
+        box-sizing: border-box;
     }
-    main > div > ul:nth-child(2) > p{
-      font-size: ;
-    }
-
+  
 
     table, th, td {
         width: 785px;
@@ -134,16 +132,30 @@
         padding: 9.5px 20px;
     }
     
+    td:nth-child(1){
+        width: 110px;
+    }
 
     main > div > ul:nth-child(3){
         float: left;
         width: 785px;
         height: 50px;
-     
+        box-sizing: border-box;
+        margin-left: 380px;
+        margin-top: 10px;
+        
+    }
+    main > div > ul:nth-child(3) > li{
+        float: left;
+        margin-left: 5px;
+    }
+    main > div > ul:nth-child(3) > li:nth-child(1){
+        margin-top: 2px;
     }
 
     .a_title {
         box-sizing: border-box;
+        width: 150px;
         height: 30px;
         left: 10px;
         right: 10px;
@@ -362,7 +374,8 @@
         height: 39px;
         left: 470px;
         right: 470px;
-        top: 460px;
+        bottom: 0px;
+        
 
         background: #353535;
     }
@@ -437,34 +450,63 @@
                 <ul>
                     <table>
                         <tr>
-                            <td>상품명 <label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
+                            <td>상품명 </td>
+                            <td><label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
+                        </tr>
+                        <tr>
+                            <td>종류</td>
+                            <td><label><input type="text" placeholder="종류" size="25;" style=" width: 45px; height: 18px;"></label></td>
                         </tr>
                         <tr>
                             <td>가격</td>
+                            <td><label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
+                        </tr>
                         </tr>
                         <tr>
-                            <td>포인트 <label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
+                            <td>포인트 </td>
+                            <td><label><input type="text" placeholder="" size="25;" style="height: 18px;"></label> 포인트는 가격의 1%</td>
                         </tr>
                         <tr>
                             <td>할인</td>
+                            <td><label><input type="text" placeholder="5%" size="25;" style=" width: 45px; height: 18px;"></label></td>
+                        </tr>
                         </tr>
                         <tr>
                             <td>배송비</td>
+                            <td><lavel><input type="radio" name="할인" value="2,000원">2,000원</lavel>
+                                <lavel><input type="radio" name="할인" value="3,000원" style="margin-left: 10px;">3,000원</lavel>
+                                <lavel><input type="radio" name="할인" value="5,000원" style="margin-left: 10px;">5,000원</lavel>
+                                <lavel><input type="radio" name="할인" value="무료" style="margin-left: 10px;">무료</lavel>
+                                
+                            
+                            </td>
                         </tr>
                         <tr>
                             <td>재고</td>
+                            <td><label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
+                        </tr>
                         </tr>
                         <tr>
                             <td>상품이미지</td>
+                            <td class="img">상품목록 이미지(약 120 x 120)<br><lavel><input type="button" value="Choose File" style="width: 85px; height: 20px; margin-top: 5px; margin-bottom: 5px;"></lavel> No file chosen<br>
+                                기본정보 이미지(약 240 x 240)<br><lavel><input type="button" value="Choose File" style="width: 85px; height: 20px; margin-top: 5px; margin-bottom: 5px;" ></lavel>  No file chosen<br>
+                                상품설명 이미지(약 750 x Auto)<br><lavel><input type="button" value="Choose File" style="width: 85px; height: 20px; margin-top: 5px; margin-bottom: 10px;" >  No file chosen</lavel>
+                            </td>
                         </tr>
                         <tr>
                             <td>기타</td>
+                            <td><label><input type="text" placeholder="" size="25;" style="height: 18px;"></label></td>
                         </tr>
                     </table>
 
                 </ul>
                 <ul>
-
+                    <li>
+                        <lavel><input type="button" value="취소" style="width: 65px; height: 35px; border-radius: 20px; font-size: larger; font-weight: 600;"></lavel>
+                    </li>
+                    <li>
+                        <lavel><input type="button" value="상품등록" style="width: 100px; height: 40px; border-radius: 20px; font-size: larger; font-weight: 600;"></lavel>
+                    </li>
                 </ul>
             </div>
         </main>
