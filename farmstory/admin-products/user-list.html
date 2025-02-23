@@ -141,10 +141,15 @@
         text-align: center;
     }
   
-    
-
-    
+        
     td:nth-child(6) {
+    white-space: nowrap;
+    width: 120px; /* 적절한 너비 설정 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 내용이 길 경우 ...으로 표시 */
+}
+
+    td:nth-child(9) {
     white-space: nowrap;
     width: 120px; /* 적절한 너비 설정 */
     overflow: hidden;
@@ -476,7 +481,7 @@
                             <td>확인</td>
                             
                         </tr>
-                        <tr style="border-bottom: 1px solid rgb(155, 155, 155);">
+                        <tr style="width: 20px;">
                             <td><label><input type="checkbox" name="할인" ></label></td>
                             <td>a101</td>
                             <td>김유신</td>
